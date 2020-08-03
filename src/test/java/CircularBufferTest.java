@@ -39,4 +39,12 @@ public class CircularBufferTest {
             }
         }
     }
+
+    @Test
+    public void write_A_one_time_should_not_empty() {
+        CircularBuffer cb = new CircularBuffer();
+        cb.writeData("A");
+        boolean result = cb.isEmpty();
+        assertFalse("Buffer empty", result);
+    }
 }

@@ -20,7 +20,7 @@
 
 ### List of test cases
 * TC01 => write_A_to_buffer_one_time_should_read_A_at_eleventh_time
-* TC02 => 1 commit
+* TC02 => write_A_one_time_should_not_empty
 * TC03 => 1 commit
 * TC04 => 1 commit
 * TC05 => 1 commit
