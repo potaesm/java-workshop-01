@@ -6,7 +6,7 @@ public class CircularBuffer {
     private int writePointer;
 
     public CircularBuffer() {
-        buffer = new String[10];
+        buffer = new String[initialBufferSize];
         bufferSize = initialBufferSize;
     }
 
@@ -28,5 +28,11 @@ public class CircularBuffer {
             readPointer = 0;
         }
         return this.buffer[readPointer++];
+    }
+
+    public void setBufferSize(int input) {
+        initialBufferSize = input;
+        buffer = new String[input];
+        bufferSize = input;
     }
 }

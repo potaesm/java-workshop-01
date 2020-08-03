@@ -69,4 +69,14 @@ public class CircularBufferTest {
         }
         assertTrue("Not the same", first.equals(eleventh));
     }
+
+    @Test
+    public void set_buffer_size_to_11_when_write_A_10_times_should_not_full() {
+        CircularBuffer cb = new CircularBuffer();
+        cb.setBufferSize(11);
+        for(int i = 1; i <= 10; i++) {
+            cb.writeData("A");
+        }
+        assertFalse("Fulled", cb.isFull());
+    }
 }

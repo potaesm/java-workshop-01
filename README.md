@@ -22,5 +22,5 @@
 * TC01 => write_A_to_buffer_one_time_should_read_A_at_eleventh_time
 * TC02 => write_A_one_time_should_not_empty
 * TC03 => write_1_to_10_then_read_first_time_and_eleventh_time_should_be_same
-* TC04 => 1 commit
+* TC04 => set_buffer_size_to_11_when_write_A_10_times_should_not_full
 * TC05 => 1 commit
