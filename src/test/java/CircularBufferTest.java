@@ -47,4 +47,26 @@ public class CircularBufferTest {
         boolean result = cb.isEmpty();
         assertFalse("Buffer empty", result);
     }
+
+    @Test
+    public void write_1_to_10_then_read_first_time_and_eleventh_time_should_be_same() {
+        CircularBuffer cb = new CircularBuffer();
+        String first = "";
+        String eleventh = "";
+        for(int i = 1; i <= 10; i++) {
+            cb.writeData(String.valueOf(i));
+        }
+        for(int i = 1; i <= 11; i++) {
+            String data = cb.readData();
+            if (i == 1) {
+                first = data;
+                System.out.println(first);
+            }
+            if (i == 11) {
+                eleventh = data;
+                System.out.println(eleventh);
+            }
+        }
+        assertTrue("Not the same", first.equals(eleventh));
+    }
 }
