@@ -79,4 +79,10 @@ public class CircularBufferTest {
         }
         assertFalse("Fulled", cb.isFull());
     }
+
+    @Test
+    public void read_without_write_before_should_return_null() {
+        CircularBuffer cb = new CircularBuffer();
+        assertNull("Not null", cb.readData());
+    }
 }
