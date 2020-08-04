@@ -12,19 +12,17 @@ public class TennisGame2 implements TennisGame {
 
     public String getScore() {
         String[] result = {"Love", "Fifteen", "Thirty", "Forty"};
-        String score = "";
         if (player1Point == player2Point) {
-            score = (player1Point >= 3) ? "Deuce" : result[player1Point] + "-All";
+            return (player1Point >= 3) ? "Deuce" : result[player1Point] + "-All";
         } else if (player1Point <= 3 && player2Point <= 3) {
-            score = result[player1Point] + "-" + result[player2Point];
+            return result[player1Point] + "-" + result[player2Point];
         } else {
             if (player1Point > player2Point) {
-                score = ((player1Point - player2Point) >= 2) ? "Win for " + this.player1Name : "Advantage " + this.player1Name;
+                return ((player1Point - player2Point) >= 2) ? "Win for " + this.player1Name : "Advantage " + this.player1Name;
             } else {
-                score = ((player2Point - player1Point) >= 2) ? "Win for " + this.player2Name : "Advantage " + this.player2Name;
+                return ((player2Point - player1Point) >= 2) ? "Win for " + this.player2Name : "Advantage " + this.player2Name;
             }
         }
-        return score;
     }
 
     public void player1Score() {
