@@ -19,9 +19,9 @@ public class TennisGame2 implements TennisGame {
             score = result[player1Point] + "-" + result[player2Point];
         } else {
             if (player1Point > player2Point) {
-                score = ((player1Point - player2Point) >= 2) ? "Win for player1" : "Advantage player1";
+                score = ((player1Point - player2Point) >= 2) ? "Win for " + this.player1Name : "Advantage " + this.player1Name;
             } else {
-                score = ((player2Point - player1Point) >= 2) ? "Win for player2" : "Advantage player2";
+                score = ((player2Point - player1Point) >= 2) ? "Win for " + this.player2Name : "Advantage " + this.player2Name;
             }
         }
         return score;
