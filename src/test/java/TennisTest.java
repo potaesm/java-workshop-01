@@ -11,9 +11,9 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Parameterized.class)
 public class TennisTest {
 
-    private final int player1Score;
-    private final int player2Score;
-    private final String expectedScore;
+    private int player1Score;
+    private int player2Score;
+    private String expectedScore;
 
     public TennisTest(int player1Score, int player2Score, String expectedScore) {
         this.player1Score = player1Score;
